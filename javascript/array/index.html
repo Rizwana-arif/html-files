@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table cellpadding="15" cellspacing="15" border="2" style="background-color:black;color:white;" width="50%"
+        align="center">
+        <tr>
+            <th>Name</th>
+            <th>Father name</th>
+            <th>CLass</th>
+            <th>English</th>
+            <th>Urdu</th>
+            <th>Math</th>
+            <th>PS</th>
+            <th>IS</th>
+            <th>Total</th>
+            <th>Obtain</th>
+            <th>Percentage</th>
+            <th>Result</th>
+        </tr>
+
+        <tr>
+            <script>
+                var std = Array("ali", "Raza", "BSCS", 90, 69, 77, 80, 36);
+
+                var total = 500;
+                var ob = 0;
+                for (var n in std) {
+                    if (typeof std[n] == "number") {
+                        var val = std[n];
+                        ob = ob + val;
+                        document.write("<td>" + val + "</td>");
+                    } else {
+                        var val = std[n];
+                        document.write("<td>" + val + "</td>");
+                    }
+
+
+                }
+
+                document.write("<td>" + total + "</td>");
+                document.write("<td>" + ob + "</td>");
+                per = Math.floor(ob / total * 100);
+                document.write("<td>" + per + "%</td>");
+                if (per >= 90 && per <= 100) {
+                    r = "A+";
+                }
+                else if (per >= 80 && per < 90) {
+                    r = "A";
+                }
+                else if (per >= 70 && per < 80) {
+                    r = "B";
+                }
+                else if (per >= 60 && per < 70) {
+                    r = "C";
+                }
+                else if (per >= 44 && per < 60) {
+                    r = "D";
+                } else {
+                    r = "F";
+                }
+                document.write("<td>" + r + "</td>");
+            </script>
+        </tr>
+    </table>
+</body>
+
+</html>

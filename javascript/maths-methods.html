@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Methods in JS</title>
+</head>
+<body>
+    <h2>Maths Methods in JavaScript</h2>
+    <script>
+        //ceil() returns the rounded value greater value .returns the upper value before the point.if the given value is in - then it returns the nearest value
+        document.write("<h3>1 - Ceil() maths method</h3>");
+        var a=69.6;
+        document.write("Rounded value : " + Math.ceil(a));
+        // floor() returns the nearest value before the point not rounded.if the given value is in - then it returns the upper value
+        document.write("<h3>2 - floor() maths method</h3>");
+        document.write("Nearest Value : " + Math.floor(a) + "</br>");
+        document.write("Nearest Value : " + Math.floor(-6.79));
+        //returns the nearest integer value
+        document.write("<h3>3 - round() maths method</h3>");
+        document.write("Nearest Value : " + Math.round(a) + "</br>");
+        document.write("Nearest Value : " + Math.round(-6.79));
+        //returns the integer value before the point 
+        document.write("<h3>4 - trunc() maths method</h3>");
+        document.write("Nearest Value : " + Math.trunc(a) + "</br>");
+        document.write("Nearest Value : " + Math.trunc(-6.79));
+        //returns the greatest value 
+        document.write("<h3>5 - max(x,y,z,....) maths method</h3>");
+        document.write("Returns the maximum value : " + Math.max(19,3,55,25,89,47) + "</br>");
+        document.write("Returns the maximum value : " + Math.max(-2,-5,-10,-60) );
+        //returns the smallest value 
+        document.write("<h3>6 - min(x,y,z,....) maths method</h3>");
+        document.write("Returns the minimum value : " + Math.min(19,3,55,25,89,47) + "</br>");
+        document.write("Returns the minimum value : " + Math.min(-2,-5,-10,-60) );
+        //sqrt(square root) returns the square root of the given value
+        document.write("<h3>7 - sqrt() maths method</h3>");
+        document.write("Square root of the given value : " + Math.sqrt(64));
+        //cbrt(cubic root) returns the cube root of the given value
+        document.write("<h3>7 - cbrt() maths method</h3>");
+        document.write("Cube root of the given value : " + Math.cbrt(64));
+        //pow(x,y) returns the power of x with respect to y
+        document.write("<h3>8 - pow(x,y) maths method</h3>");
+        document.write("Power of given value : " + Math.pow(5,2));
+        // random() generates a large random values 
+        document.write("<h3>9 - random() maths method</h3>");
+        document.write("Returns Random values : " + Math.random() + "</br>");
+        document.write("Returns Random values between the given value : " + (Math.floor(Math.random()*100)+1) );
+        //returns the absolute value
+        document.write("<h3>10 - abs() maths method</h3>");
+        document.write("Returns the absolute value : " + Math.abs(9.26) + "</br>");
+        document.write("Returns the absolute value : " + Math.abs(-9.26) + "</br>");
+        document.write("Returns the absolute value : " + Math.abs(null) + "</br>");
+        document.write("Returns the absolute value : " + Math.abs("hello") );
+        //property of maths returns the value of PI
+        document.write("<h3>11 - PI maths property</h3>");
+        document.write("Value of PI : " + Math.PI);
+    </script>
+</body>
+</html>

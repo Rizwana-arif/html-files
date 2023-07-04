@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table cellpadding="15" cellspacing="15" border="2" style="background-color:black;color:white;" width="50%"
+        align="center">
+        <tr>
+            <th>Name</th>
+            <th>Father name</th>
+            <th>CLass</th>
+            <th>English</th>
+            <th>Urdu</th>
+            <th>Math</th>
+            <th>PS</th>
+            <th>IS</th>
+            <th>Total</th>
+            <th>Obtain</th>
+            <th>Percentage</th>
+            <th>Result</th>
+        </tr>
+        <script>
+    var std={  
+        "ali":Array ("Raza","BSCS",90,99,97,100,96),
+        "maaz":Array ("ali","BSCS",70,89,57,80,46),
+        "hina":Array ("shahzad","BSCS",80,79,67,70,66),
+        "Adeel":Array ("akram","BSCS",90,69,77,60,76),
+        "Azam":Array ("shahzad","BSCS",60,59,87,50,86),
+        "ayesha":Array ("akram","BSCS",90,49,97,40,96),
+        "zeshan":Array ("akram","BSCS",49,58,47,46,49)
+    };
+
+    var total=500;
+     for(var name in std){
+        document.write( "<tr>");
+        var ob=0;
+        var val=std[name];
+       document.write("<td>"+name+"</td>");
+         for(var t in val){
+            var data=std[name][t];
+            if(typeof data =="number"){
+                ob=ob+data;
+                document.write("<td>"+data+"</td>");
+         }else{
+            document.write("<td>"+data+"</td>");
+         }
+   
+         }
+         document.write("<td>"+total+"</td>");
+         document.write("<td>"+ob+"</td>");
+         var per=Math.floor(ob/total*100);
+         document.write("<td>"+per+"%</td>");
+         if(per>=90 && per<=100){
+            r="A+";
+         }
+         else if(per>=80 && per<90){
+            r="A";
+         }
+           else if(per>=70 && per<80){
+            r="B";
+         }
+            else if(per>=60 && per<70){
+            r="C";
+         }
+            else if(per>=44 && per<60){
+            r="D";
+         }else{
+            r="F";
+         }
+         document.write("<td>"+r+"</td>");
+document.write( "</tr>");
+     }
+</script>
+    </table>
+</body>
+
+</html>

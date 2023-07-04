@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Array in JS</title>
+    <style>
+        h1{
+            text-align: center;
+            color: rgb(214, 114, 97);
+            text-shadow: 10px 10px 10px rgb(243, 98, 98);
+            
+        }
+        table {
+            
+            margin-left:auto;
+            margin-right:auto;
+            border-radius: 15px 5px 5px 5px;
+            box-shadow: 20px 20px 20px #d6b5b5;
+            }
+        table th {
+            background-color: rgb(214, 114, 97);
+            color: black;
+            text-align: center;
+            font-weight: bold;
+        }
+        table th,
+        table td{
+            padding: 15px 20px;
+        }
+        table  tr{
+            border-bottom: 1px solid #d6b5b5;
+        }
+        table  tr:nth-of-type(even){
+            background-color: rgb(169, 219, 202);
+
+        }
+        .table  tr:last-of-type{
+            border-bottom: 2px solid rgb(214, 114, 97);
+        }
+       
+
+     </style>
+</head>
+
+<body>
+    <h1>Student Record </h1>
+    <table >
+        <tr>
+            <th>Name</th>
+            <th>Father name</th>
+            <th>CLass</th>
+            <th>English</th>
+            <th>Urdu</th>
+            <th>Math</th>
+            <th>PS</th>
+            <th>IS</th>
+            <th>Total</th>
+            <th>Obtain</th>
+            <th>Percentage</th>
+            <th>Result</th>
+        </tr>
+        <script>
+            var record = {
+                "Rizwana": Array("Arif Ali", "BSCS", 89, 80, 98, 89, 90),
+                "Hani": Array("Ahmad", "BSCS", 80, 70, 78, 79, 80),
+                "Haram": Array("Sohail", "BSCS", 77, 90, 76, 66, 70),
+                "Hareem": Array("Ali", "BSCS", 89, 80, 80, 71, 80),
+                "Ayesha": Array("Nasir", "BSCS", 77, 60, 66, 70, 79),
+                "Rimsha": Array("Arshad", "BSCS", 76, 80, 78, 69, 80)
+            };
+            var total = 500;
+            for (var name in record) {
+                document.write("<tr>");
+                var ob = 0;
+                var val = record[name];
+                document.write("<td>" + name + "</td>");
+                for (var text in val) {
+                    var data = record[name][text];
+                    if (typeof data == "number") {
+                        ob = ob + data;
+                        document.write("<td>" + data + "</td>");
+                    } else {
+                        document.write("<td>" + data + "</td>");
+                    }
+                }
+                document.write("<td>" + total + "</td>");
+                document.write("<td>" + ob + "</td>");
+                var per = Math.floor(ob / total * 100);
+                document.write("<td>" + per + "%" + "</td>");
+                if (per >= 90 && per <= 100) {
+                    grade = "A+";
+                }
+                else if (per >= 80 && per < 90) {
+                    grade = "A";
+                }
+                else if (per >= 70 && per < 80) {
+                    grade = "B";
+                }
+                else if (per >= 60 && per < 70) {
+                    grade = "C";
+                }
+                else if (per >= 44 && per < 60) {
+                    grade = "D";
+                } else {
+                    grade = "F";
+                }
+                document.write("<td>" + grade + "</td>");
+
+
+
+                document.write("</tr>");
+            }
+        </script>
+    </table>
+</body>
+
+</html>

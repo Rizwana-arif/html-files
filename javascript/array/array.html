@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //   var std= Array("ali","Raza","BSCS",90,99,97,100,96);
+        //  for(var d in std){
+           
+        //     document.write("<h1>"+ typeof std[d]+"<h1>");
+        //  } 
+
+        var std= {
+            "ali":Array("maaz", "Raza", "BSCS", 90, 69, 77, 80, 36),
+            "humza":Array("zubair", "Raza", "BSCS", 90, 69, 77, 80, 36),
+            "adeel":Array("waqar", "Raza", "BSCS", 90, 69, 77, 80, 36),
+            "sir anees":Array("akram", "Raza", "BSCS", 90, 69, 77, 80, 36)
+        };
+         for(var d in std){
+            document.write("<h1>"+d+"<h1>");
+           var arr=std[d];
+           for (var t in arr){
+            document.write("<h1>"+std[d][t]+"<h1>");
+           }
+         } 
+    </script>
+</body>
+</html>

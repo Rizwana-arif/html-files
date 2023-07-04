@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Functions in JS</title>
+</head>
+
+<body>
+    <h2>Array Functions in JavaScript</h2>
+    <script>
+        //modify any value of array
+        var ar = ["ali", "Haram", "raza", "Basit", "hani"];
+        document.write("<h3>1 - Modify() array </h3>");
+        document.write("Array values : " + ar + "</br>");
+        ar[0] = "aleezy";
+        document.write("Array values : " + ar);
+        //delete an index from the array
+        document.write("<h3>2 - Delete() array </h3>");
+        document.write("Array values : " + ar + "</br>");
+        delete ar[1];
+        document.write("Array values : " + ar);
+        //sort the values of array in ascending or decending manners
+        var ar = ["ali", "haram", "raza", "basit", "hani"];
+        document.write("<h3>3 - Sort() array </h3>");
+        document.write("Arranging values : " + ar.sort());
+        //it reverse the values of array
+        var ar = ["ali", "haram", "raza", "basit", "hani"];
+        document.write("<h3>4 - reverse() array </h3>");
+        document.write("Reverse the values : " + ar.reverse());
+        //it removes the last value of array
+        var arr = ["ali", "haram", "raza", "basit", "hani"];
+        document.write("<h3>5 - pop() array </h3>");
+        arr.pop();
+        document.write("Remove last value : " + arr);
+        //it add a new value to the end of the array
+        var arr = ["ali", "haram", "raza", "basit", "hani"];
+        document.write("<h3>6 - push() array </h3>");
+        arr.push("hareem");
+        document.write("Add new value on last  : " + arr);
+        // same to the pop function difference is it delete the first value of array
+        var arr = ["ali", "haram", "raza", "basit", "hani"];
+        document.write("<h3>7 - shift() array </h3>");
+        arr.shift();
+        document.write("Removes first value from array  : " + arr);
+        //same as push function d/f is that it add value at the first in array
+        document.write("<h3>8 - unshift() array </h3>");
+        arr.unshift("Hareem");
+        document.write("Removes first value from array  : " + arr);
+        //join two array or values with an array
+        var arr = ["ali", "haram", "raza", "basit", "hani"];
+        var arr1=["23","Subhan"];
+        document.write("<h3>9 - concat() array </h3>");
+        var arr2=arr.concat("Anabya" , "Roman");
+        document.write("Joins array   : " + arr2 +"</br>");
+        var con=arr.concat(arr1);
+        document.write("Joins array   : " + con +"</br>");
+        // join () makes the arrays strings a single value
+        document.write("<h3>10 - join() array </h3>");
+        var joi=arr.join("--");
+        document.write("Joins array   : " + joi );
+        //slice() divide the array and takes the values from the array and makes a new array
+        document.write("<h3>11 - slice() array </h3>");
+        var arr = ["ali", "haram", "raza", "basit", "hani"];
+        var sli=arr.slice(2,5);
+        var sl=arr.slice(3);
+        document.write("Slice the array   : " + sli + "</br>");
+        document.write("Slice the array   : " + sl );
+        //splice(index,how many delete,"new value") insert the new value after any index value
+        document.write("<h3>12 - splice() array </h3>");
+        var arrr = ["ali", "haram", "raza", "basit", "hani"];
+        arrr.splice(2,0,"neha","ramsha");
+        document.write("Insert new value in the array   : " + arrr );
+        //for checking whether this is an array or not
+        document.write("<h3>13 - isArray() array </h3>");
+        document.write("Is the given value is array : " + Array.isArray(arr) + "</br>");
+        if (Array.isArray(arr)==true){
+            document.write("This is an Array");
+        }else{
+            document.write("This is not an Array");
+        }
+        //indexOf('search item,start') finds the value from array checks whether the search value exists or not or return index of searched value
+        document.write("<h3>14 - indexOf() array </h3>");
+        document.write("Index of searched value : " + arr.indexOf('ali'));
+        //lastIndexOf() same as indexof() but the d/f is that it  start search from the end of the array 
+        document.write("<h3>15 - lastIndexOf() array </h3>");
+        document.write("Index of searched value : " + arr.lastIndexOf('ali'));
+        //includes() search any value and returns true/false
+        document.write("<h3>16 - includes() array </h3>");
+        document.write("check value from array: " + arr.includes('ali'));
+        //some() checks the conditions and return true if only one condition is true.some is always uses functions to check condition
+        var ages=[17,12,10,2,20,34];
+        document.write("<h3>17 - Some() array method</h3>");
+        document.write("Ages : " + ages + "</br>");
+        var b=ages.some(checkAdult);
+        document.write("Check Adults : " + b);
+
+        function checkAdult(age){
+            return age >=18;
+        }
+        //some() checks the conditions and return true if all condition is true.some is always uses functions to check condition
+        var ages=[17,12,10,2,20,34];
+        document.write("<h3>18 - every() array method</h3>");
+        document.write("Ages : " + ages + "</br>");
+        var b=ages.every(checkAdult);
+        document.write("Check Adults : " + b);
+
+        function checkAdult(age){
+            return age >=18;
+        }
+        //find() returns the value of the first element in the array that pass a test
+        document.write("<h3>19 - find() array method</h3>");
+        document.write("Ages : " + ages + "</br>");
+        var b=ages.find(checkAdult);
+        document.write("Check adults from array : " + b);
+        //findIndex() returns the index of the first element in the array that pass a test
+        document.write("<h3>20 - findIndex() array method</h3>");
+        document.write("Ages : " + ages + "</br>");
+        var b=ages.findIndex(checkAdult);
+        document.write("index of Adults : " + b);
+        //filter() method creates an array filled with all array elements that pass a test always returns a new array
+        document.write("<h3>21 - filter() array method</h3>");
+        document.write("Ages : " + ages + "</br>");
+        var b=ages.filter(checkAdult);
+        document.write("Array of Adults : " + b);
+        //toString() converts an array into string and returns the result
+        document.write("<h3>22 - toString() array method</h3>");
+        document.write("Convert an array into string : " + arr.toString());
+        //valueOf returns an array when we want to print full array values it not much used ,we also prints array values simply
+        document.write("<h3>23 - valueOf() array method</h3>");
+        document.write("Prints an Array : " + arr.valueOf());
+        //fill() method fills all the elements in an array ith static value
+        document.write("<h3>24 - fill() array method</h3>");
+        document.write("Fill an Array : " + arr.fill('Hani'));
+        //forEach() simply prints a statement based on function without loop
+        document.write("<h3>25 - forEach() array method</h3>");
+        var arr11 = ["ali", "haram", "raza", "basit", "hani"];
+        arr11.forEach(function(value,index){
+            document.write(index + " : "+value+ "</br>");
+        });
+
+    </script>
+</body>
+
+</html>

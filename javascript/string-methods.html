@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String-Methods in JS </title>
+</head>
+<body>
+    <h2>String Methods In JavaScript</h2>
+    <script>
+        // for measuring string length
+        document.write("<h3>" + "1 - String length method to measure string length" + "</h3>");
+        var str="abcdefghijklmnopqrstuvwxyz";
+        document.write("The length of the string is : " + str.length);
+        //slice() extracts a part of a string and returns the extracted part in a new string.
+        document.write("<h3>" + "2 - Slice() extracts a part of string" + "</h3>");
+        var fruits="Apple . Banana . Apple . Kiwi . Grapes";
+        document.write("extract string : "+ fruits.slice(-15));
+        //substring() is similar to slice().The difference is that start and end values less than 0 are treated as 0 in substring().Not accept negative value.
+        document.write("<h3>" + "3 - substring() is similar to slice()" + "</h3>");
+        document.write("extract strings : " + fruits.substring(7,15));
+        //substr() is similar to slice().The difference is that the second parameter specifies the length of the extracted part. Starting is a starting from counting value and second is character value like starting from 8 value and take characters 8. (8,8)
+        document.write("<h3>" + "4 - substr() is similar to slice()" + "</h3>");
+        document.write("extract strings : " + fruits.substr(16,7) + "</br>");
+        document.write("extract strings : " + fruits.substr(2));
+        //replaces a value with a new value in string,,,replaces only the first match replace all values uses global parameter (/apple/g,"banana")
+        document.write("<h3>" + "5 - replace(old,new)" + "</h3>");
+        document.write("replace a value in string : " + fruits.replace("Apple","Mango"));
+         //replaces a value with a new value in string,,,replaces all the matches value
+         document.write("<h3>" + "6 - replaceAll(old,new)" + "</h3>");
+        document.write("replace a value in string : " + fruits.replaceAll("Apple","Mango"));
+        // String toUpperCase() converts all the string values in uppercase
+        document.write("<h3>" + "7 - string toUppercase()" + "</h3>");
+        document.write("Values converted in uppercase : " + fruits.toUpperCase());
+           // String toLowerCase() converts all the string values in lowercase
+        document.write("<h3>" + "8 - string toLowercase()" + "</h3>");
+        document.write("Values converted in lowercase : " + fruits.toLowerCase());
+        //concat() joins two or more strings:
+        var firstname="Rizwana";
+        var secondname="Arif Ali";
+        document.write("<h3>" + "9 - concat()" + "</h3>");
+        document.write("Joins strings : " + firstname.concat(" ", secondname));
+        //trim() method removes the white spaces from both sides.
+        var qoute="    Try,Try again        ";
+        document.write("<h3>" + "10 - trim()" + "</h3>");
+        var trim=qoute.trim();
+        document.write("Remove White spaces : " + trim +"</br>");
+        document.write("Length of the string : " + qoute.length +"</br>");
+        document.write("After trim length of the string : " + trim.length +"</br>");
+        //trimStart() method removes the white spaces from start side.
+        document.write("<h3>" + "11 - trimStart()" + "</h3>");
+        var trimS=qoute.trimStart();
+        document.write("Remove White spaces : " + trim + "</br>");
+        document.write("Lenght of string : " + qoute.length + "</br>");
+        document.write("After Trim String Length : " + trimS.length);
+        //trimEnd() method removes the white spaces from end side.
+        document.write("<h3>" + "12 - trimEnd()" + "</h3>");
+        var trimE=qoute.trimEnd();
+        document.write("Remove White spaces : " + trim + "</br>");
+        document.write("Lenght of string : " + qoute.length + "</br>");
+        document.write("After Trim String Length : " + trimE.length);
+         //padStart() method It pads a string with another string (multiple times) until it reaches a given length..starting value gives for the length of padding and second which added
+         document.write("<h3>" + "13 - padStart()" + "</h3>");
+         var price="6";
+         document.write("Padding In start : " + price.padStart(4," "));
+          //padStart() method It pads a string with another string (multiple times) until it reaches a given length..
+          document.write("<h3>" + "14 - padEnd()" + "</h3>");
+         var price="6";
+         document.write("Padding at ends : " + price.padEnd(4,"0"));
+         //charAt (Position) Merhod , find the value of the specicified string position
+         document.write("<h3>" + "15 - charAt() Method" + "</h3>");
+         document.write("Find the positioned character : " + qoute.charAt(10));
+         //charCodeAt returns the unicode of the specified string position character
+         document.write("<h3>" + "16 - charCodeAt() Method" + "</h3>");
+         var qoute="    Try,Try again        ";
+         document.write("Unicode of the character : " + qoute.charCodeAt(10));
+         //fromCharCode returns the value for a code 
+        //  document.write("<h3> 17 - fromCharCode() method </h3>");
+        //  document.write("Value for code : " + string.fromCharCode(65));
+         // split () method breaks the string at the specified passed delimeter.and combines with , comma
+         document.write("<h3>" + "17 - split() Method" + "</h3>");
+         document.write("Breaks the string : " + fruits.split("."));
+         //repeat() is used to repeat string 
+         document.write("<h3>18 -  repeat() method </h3>");
+         document.write("Repeat a string value : " + qoute.repeat(2));
+         //converts all values in string 
+         document.write("<h3>19 -  toString() method </h3>");
+         var numb=50;
+         document.write("converts into string : " + fruits.toString() + "</br>");
+         document.write("Convert into string : " + numb.toString());
+         //valueof works like tostring
+         document.write("<h3>20 -  valueOf() method </h3>");
+         var numb=50;
+         document.write("converts into string : " + fruits.valueOf() + "</br>");
+         document.write("Convert into string : " + numb.valueOf());
+         
+
+         document.write("<h2>String Search Methods In JS </h2>");
+         //indexOf() returns the index of the specifiesd string value,
+         document.write("<h3>" + "1 - indexOf() Search method" + "</h3>");
+         var str="Learn Javascript from the zero and becomes professional ";
+         document.write("Index of the string value : " + str.indexOf("c")+ "</br>");
+         document.write("Index of the string value : " + str.indexOf("c",15) + "</br>");
+         document.write("Index of the string value : " + str.indexOf("zero"));
+         //The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+         document.write("<h3>" + "1 - lastIndexOf() Search method" + "</h3>");
+         var str="Learn Javascript from the zero and becomes professional.";
+         document.write("Index of the string value : " + str.lastIndexOf("c")+ "</br>");
+         document.write("Index of the string value : " + str.lastIndexOf("c",15) + "</br>");
+         document.write("Index of the string value : " + str.lastIndexOf("zero"));
+         // is similar to indexof() but the difference is u dont specified that from where u start the search
+         document.write("<h3>" + "2 - search() Search method" + "</h3>");
+         document.write("Index of the string value : " + str.search("c")+ "</br>");
+         document.write("Index of the string value : " + str.search("zero"));
+         //The match() method returns an array containing the results of matching a string against a string (or a regular expression).
+         document.write("<h3>" + "3 - match() Search method" + "</h3>");
+         var myarr=str.match("er");
+         document.write("perform a search for : " + myarr.length + " - " + myarr);
+         //The matchAll() method returns an iterator containing the results of matching a string against a string (or a regular expression).
+         document.write("<h3>" + "4 - matchAll() Search method" + "</h3>");
+         document.write("perform a search : "+ str.matchAll("zero"));
+         //includes() search method search a value and returns true or false value if finds then returns true otherwise false.case sensitive
+         document.write("<h3> 5 - includes() search method </h3>");
+         document.write("Search a value :  " + str.includes("the"));
+         // startswith () is also a search method only  search the first value of the string
+         document.write("<h3> 6 - startWith() search method </h3>");
+         document.write("Search a value :  " + str.startsWith("Learn"));
+           // endsWith () is also a search method only  search the last value of the string
+           document.write("<h3> 6 - endsWith() search method </h3>");
+         document.write("Search a value :  " + str.endsWith("professional."));
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods in JS</title>
+</head>
+<body>
+    <h2>Number Methods in JavaScript</h2>
+    <script>
+        //number function used to convert string values in numbers
+        document.write("<h3>1 - Number() </h3>");
+        var a="50";
+        var numb=Number(a);
+        document.write("Convert into number : " + (numb+10) + "</br>");
+        var b=true;
+        document.write("convert into number : " + Number(b) + "</br>");
+        var str="88 90";
+        document.write("convert into numbers : " + Number(str) + "</br>");
+        //parseInt is used to convert all decimal or floating values in integer.
+        var dec= 187.988;
+        document.write("<h3>2 - parseInt() </h3>");
+        document.write("Convert into integer : " + parseInt(dec));
+        //parseFloat returns floating values .
+        var dec= 187.98;
+        document.write("<h3>3 - parseFloat() </h3>");
+        document.write("Floating Values : " + parseFloat(dec));
+        //isFinite checks whether the given value is finit or infinite and returns true or false (is always used for checking some conditions)
+        document.write("<h3>4 - isFinite() </h3>");
+        document.write("Check the function : " + isFinite(dec))
+        //isInteger checks whether the given value is integer or not and returns true or false (is always used for checking some conditions)
+        document.write("<h3>5 - isInteger() </h3>");
+        document.write("Check the function : " + Number.isInteger(dec))
+        //toFixed returns the rounded value for the parse integer value and shows the specifid values after decimal point
+        document.write("<h3>6 - toFixed() </h3>");
+        document.write("Rounded the value  : " + dec.toFixed(2));
+        //works same tofixed function
+        var inte=3.197;
+        document.write("<h3>7 - toPrecision() </h3>");
+        document.write("Rounded the value  : " + inte.toPrecision(3));
+        //toString converts number value into string.
+        document.write("<h3>8 - toString() </h3>");
+        document.write("Returns a string value  : " + (inte.toString()+10));
+        //toExponential() returns a string, with a number rounded and written using exponential notation.
+        var x=3.1987;
+        document.write("<h3>8 - toExponential() </h3>");
+        document.write("Returns a rounded value  : " + (x.toExponential(6)));
+        
+    </script>
+</body>
+</html>

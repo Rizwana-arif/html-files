@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="age-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <title>Age Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input">
+            <input type="date" id="bdt" name="bdt" />
+            <button id="done">Calculate</button>
+        </div>
+        <div class="output">
+            <div >
+                <span id="years" name="years">
+                    --
+                </span>
+                <p>
+                    Years
+                </p>
+            </div>
+           <div >
+            <span id="months" name="months">
+                --
+            </span>
+            <p>
+                Months
+            </p>
+           </div>
+           <div >
+            <span id="days" name="days">
+                --
+            </span>
+            <p>
+                Days
+            </p>
+           </div>
+        </div>
+        
+    </div>
+<script type="text/JavaScript">
+    document.querySelector("#done").addEventListener("click",function(){
+        const update = function(){
+            let bdt= document.querySelector("#bdt").value,
+            bday=new Date(bdt),
+            bday_val= bday.get
+            
+        }
+    })
+</script>
+</body>
+
+</html>

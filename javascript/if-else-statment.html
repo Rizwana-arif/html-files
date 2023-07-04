@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+   
+    var phy=70;
+    var che=89;
+    var bio=59;
+    var com=87;
+    var total=phy+che+bio+com;
+    var per=total*100/400;
+    var grade;
+    
+    if(per>=90 && per==100){
+         grade="A+";
+    }
+    else if(per>=80 && per<=90 )
+    {
+         grade="A";
+    }
+    else if(per>=60 && per<=80 )
+    {
+         grade="B";
+    }
+    else if(per>=50 && per<=60 )
+    {
+        grade="C";
+    }
+    else if(per>=40 )
+    {
+        grade="D";
+    }
+    else{
+        document.write( "Your grade is F.Please try again!");
+    }
+</script>
+     <table cellspacing="2" cellpadding="3" border="1" style="background-color:grey;color:white;" width=50% align="center">
+        <tbody><tr>
+            <th>Name</th>
+            <td>Rizwana</td>
+            <th>Father Name</th>
+            <td>Arif Ali</td>
+
+        </tr>
+        
+            <tr >
+                <th colspan="2">subjects</th>
+                <th>Total Marks</th>
+                <th>Obtained Marks</th>
+            </tr>
+            <tr>
+                <th colspan="2">Physics</th>
+                <th>100</th>
+                <th> <script>document.write(phy);</script></th>
+            </tr>
+            <tr >
+                <th colspan="2">Biology</th>
+                <th>100</th>
+                <th><script>document.write(bio);</script></th>
+            </tr>
+            <tr >
+                <th colspan="2">Chemistry</th>
+                <th>100</th>
+                <th><script>document.write(che);</script></th>
+            </tr>
+            <tr >
+                <th colspan="2">Computer</th>
+                <th>100</th>
+                <th><script>document.write(com);</script></th>
+            </tr>
+            <tr>
+                <td colspan="4"><script>document.write("Total obtained marks : " + total);</script></td>
+            </tr>
+            <tr>
+            <td colspan="2"><script>document.write("Percentage =" + per);</script></td>
+            <td colspan="2"><script>document.write("Your Grade is : " + grade);</script></td>
+            </tr>
+        </tbody>
+    
+    
+</body>
+</html>

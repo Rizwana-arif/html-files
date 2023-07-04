@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Objects in JS</title>
+</head>
+<body>
+    <h2>Date Objects In JavaScript</h2>
+    <script>
+        //we also finds the day,month and exact date information of past date 
+        var past=new Date('january 25 2010');
+        document.write("Past Date : " + past);
+        var now=new Date();
+        document.write("<h2>Current Date</h2>");
+        document.write("Current Date : " + now);
+        // returns date in readabl form
+        document.write("<h2>1- toDateString </h2>");
+        document.write("Current Date : " + now.toDateString());
+        //only returns the current date
+        document.write("<h2>2- getDate </h2>");
+        document.write("Today is : " + now.getDate());
+        //returns the current year
+        document.write("<h2>3- getFullYear </h2>");
+        document.write("we are in this year  : " + now.getFullYear());
+        //returns the current month
+        document.write("<h2>3- getMonth </h2>");
+        document.write("we are in the month of   : " + now.getMonth());
+        //returns the current day number
+        document.write("<h2>4- getDay </h2>");
+        document.write("Todays the day of week    : " + now.getDay());
+        //returns the Hour of the current time
+        document.write("<h2>5- getHours </h2>");
+        document.write("Hours of current time   : " + now.getHours());
+        //returns the minutes of the current time
+        document.write("<h2>6- getMinutes </h2>");
+        document.write("Minutes of current time   : " + now.getMinutes());
+        //returns the seconds of the current time
+        document.write("<h2>7- getSeconds </h2>");
+        document.write("Seconds of current time   : " + now.getSeconds());
+        //returns the Milliseconds of the current time
+        document.write("<h2>8- getMilliseconds </h2>");
+        document.write("Milliseconds of current time   : " + now.getMilliseconds());
+        // set date
+        document.write("<h2>9- setDate </h2>");
+        now.setDate(20);
+        document.write("Set date  : " + now);
+        // set fullyear
+        document.write("<h2>10- setFullYear </h2>");
+        now.setFullYear(2024);
+        document.write("Set date at year  : " + now);
+        // set month
+        document.write("<h2>11- setMonth </h2>");
+        now.setMonth(9);
+        document.write("Set date at month  : " + now);
+        var now=new Date();
+        // set hours
+        document.write("<h2>12- setHours </h2>");
+        now.setHours(12);
+        document.write("Set date and hours  : " + now);
+         // set minutes
+         document.write("<h2>13- setMinutes </h2>");
+        now.setMinutes(12);
+        document.write("Set date according to hours  : " + now);
+         // set seconds
+         document.write("<h2>14- setSeconds </h2>");
+        now.setSeconds(58);
+        document.write("Set date and seconds  : " + now);
+        //how we use these function to print date
+        document.write("<h2>15- Prints date </h2>");
+        document.write("<h4> Current date in userdefined format : " + now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear() + "</h4>");
+    </script>
+</body>
+</html>

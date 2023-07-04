@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+  <table cellpadding="15" cellspacing="15" border="2" style="background-color:black;color:white;" width="50%"
+  align="center">
+  <tr>
+      <th>Name</th>
+      <th>Father name</th>
+      <!-- <th>CLass</th> -->
+      <th>English</th>
+      <th>Urdu</th>
+      <th>Math</th>
+      <th>PS</th>
+      <th>IS</th>
+      <th>Total</th>
+      <th>Obtain</th>
+      <th>Percentage</th>
+      <th>Grade</th>
+  </tr>
+             <tbody>
+<script>  
+ 
+     var std ={
+      BSCS:{   
+        khadija: Array("Mehboob", 90,99,90,90,56),
+     zara: Array("ali",70,19,37,80,46),
+     farooq: Array("shahzad",70,74,87,70,66),
+     wasim: Array("akram",90,69,77,60,76),
+     Nouman: Array("Ijaz",60,59,87,50,86),
+     Iqra: Array("kanwal",90,49,97,40,96), 
+     },
+
+      BSIT:{   
+         ali: Array("Raza", 89,99,47,90,56),
+     maaz: Array("ali",70,89,57,80,46),
+     hina: Array("shahzad",80,89,87,80,66),
+     Adeel: Array("akram",90,66,77,60,76),
+     Azam: Array("shahzad",60,59,87,50,86),
+     ayesha: Array("akram",90,49,81,40,96),
+     zeshan:Array("akram",49,58,37,46,49)    
+     },      
+
+      BSC:{   
+         ali: Array("Raza", 90,99,47,90,56),
+     maaz: Array("ali",70,89,57,80,46),
+     hina: Array("shahzad",80,89,87,70,66),
+     Adeel: Array("akram",90,69,66,60,76),
+     Azam: Array("shahzad",60,59,87,50,86),
+     ayesha: Array("akram",90,49,47,40,96),
+     zeshan:Array("akram",49,58,47,46,49)    
+     },
+   };
+
+    total=500;
+    var i = 1; 
+     for (const key in std ){
+        document.write("<tr>");
+        ob=0;
+        document.write(
+         "<td colspan= '12' class='text-center table secondry'>" +
+            key +
+            "</td>"
+        );
+           document.write("<tr>");
+            document.write("<tr class='table-success text-center'>");
+                  document.write("<th>Sr:no</th>");
+            document.write("<th>Name</th>");
+           document.write("<th>Father name</th>");
+          // document.write( " <th>CLass</th>");
+           document.write(" <th>English</th>");
+           document.write( "<th>Urdu</th>");
+          document.write("<th>Math</th>");
+            document.write("<th>PS</th>");
+            document.write("<th>IS</th>");
+            document.write("<th>Total</th>");
+           document.write( "<th>Obtain</th>");
+            document.write("<th>Percentage</th>");
+           document.write( "<th>Grade</th>");
+        document.write("</tr>");
+       
+     var data = std[key];
+     for (const mydata in data)
+         {
+         var ob = 0;
+                    document.write("<tr>");
+                    document.write("<td>" + i++ + "</td>");
+                    document.write("<td>" + mydata + "</td>");
+
+                    var sbdata = data[mydata];
+
+                    for (const aa of sbdata) {
+                      if (typeof aa == "number") {
+                        ob = ob + aa;
+                        document.write("<td>" + aa + "</td>");
+                      } else {
+                        document.write("<td>" + aa + "</td>");
+                      }
+                    }
+
+                    document.write("<td>" + total + "</td>");
+                    document.write("<td>" + ob + "</td>");
+                    var per = (ob / total) * 100;
+                    document.write("<td>" + per + "</td>");
+
+                    if (per >= 85 && per <= 100) {
+                      var g = "A+";
+                    } else if (per >= 75 && per < 85) {
+                      var g = "A";
+                    } else if (per >= 65 && per < 75) {
+                      var g = "B";
+                    } else if (per >= 45 && per < 65) {
+                      var g = "C";
+                    } else if (per >= 30 && per < 55) {
+                      var g = "D";
+                    } else {
+                      var g = "F";
+                    }
+                    document.write("<td>" + g + "</td>");
+
+                    document.write("</tr>");
+                  }
+                }
+              </script>
+            </tbody>
+          </table>
+   </div>
+</div>
+</div>
+
+</html>
